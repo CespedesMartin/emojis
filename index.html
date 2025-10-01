@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emojis — BEA</title>
+  <link rel="stylesheet" href="vista.css">
+</head>
+<body>
+  <!-- overlay de corazones (rellenado por JS) -->
+  <div id="heartsOverlay" aria-hidden="true"></div>
+
+  <main class="page">
+    <header>
+      <h1 class="title">ERES MI INSPIRACIÓN❤️</h1>
+      <p class="sub">----------😍Presiona los emojis💕----------</p>
+    </header>
+
+    <!-- fila de letras + emoji bajo cada letra -->
+    <section id="nameRow" class="name-row">
+      <div class="letter-block">
+        <span class="letter">B</span>
+        <button class="emoji-btn" data-message="🥰Bea, desde aquel día en que te conocí te volviste alguien muy especial para mí🙈 
+        algo en mí cambió😌.No suelo mostrar mis sentimientos tan rápido, pero contigo todo se siente distinto. 
+        No quiero correr ni apresurarme; solo quiero que sepas que me alegra haberte encontrado☘️💗">😻</button>
+      </div>
+
+      <div class="letter-block">
+        <span class="letter">E</span>
+        <button class="emoji-btn" data-message="🧠En mis pensamientos pienso que la vida está hecha de pequeños momentos😊
+        y conocerte fue uno de esos que se quedara grabado📼. Tal vez no lo notes, pero cada día me inspiras a ser más detallista,
+        y a dar lo mejor de mí.❤️💖">🥹</button>
+      </div>
+
+      <div class="letter-block">
+        <span class="letter">A</span>
+        <button class="emoji-btn" data-message="Bea😍 hay algo que me pasa contigo cuando tu sonríes🤭 
+        aunque sea un poquito, siento que todo vale la pena. Mi intención no es presionarte,
+        si no hacerte sonreír cada día más con mis ocurrencias.🥰">🤷🏻‍♀</button>
+      </div>
+
+      <div class="letter-block">
+        <span class="letter">T</span>
+        <button class="emoji-btn" data-message="💕No sé qué tenga el destino preparado, 
+        pero me alegra que en este momento de mi vida hayas aparecido tú. No busco nada a la ligera, sino que poco a poco podamos conocernos mejor. 
+        A veces las mejores cosas llegan así, de a poquito, y por eso quiero disfrutar cada paso contigo.💗">❤️</button>
+      </div>
+
+      <div class="letter-block">
+        <span class="letter">R</span>
+        <button class="emoji-btn" data-message="Bea❤️ hay un dicho que dice que uno no elige de quién enamorarse,
+        y creo que eso me pasó contigo. Después de mucho tiempo solo, me sorprende sentir algo tan fuerte por ti. 
+        No quiero que lo tomes a mal, solo quiero ser honesto con lo que siento🤗">😌</button>
+      </div>
+
+      <div class="letter-block">
+        <span class="letter">I</span>
+        <button class="emoji-btn" data-message="Sabes algo🤭 a veces me pongo a pensar en el día en que vuelva a verte 
+        y no te imaginas las ganas que tengo de que ese momento llegue❣️ Y asi poder ver tu sonrisa,
+        poder hablar contigo, y decirte lo muy valioso que eres para mi💖.">🤦🏻‍♀</button>
+      </div>
+
+      <div class="letter-block">
+        <span class="letter">Z</span>
+        <button class="emoji-btn" data-message="Bea...gracias🥰 Gracias por dejarme compartir aunque sea un poquito de mi mundo contigo.
+        Pase lo que pase, quiero que sepas que para mí ya eres alguien muy especial y 
+        siempre estaré ahi para sacarte una sonrisa💗">😘</button>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="secretBtn" class="secret-btn">👀Emoji secreto</button>
+    </div>
+  </main>
+
+  <!-- Modal para mensajes de emoji -->
+  <div id="msgModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeMsg">&times;</button>
+      <div id="msgModalInner" class="modal-inner"></div>
+    </div>
+  </div>
+
+  <!-- Modal secreto (escritura lenta, input y video) -->
+  <div id="secretModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeSecret">&times;</button>
+
+      <div class="modal-inner">
+        <div id="typedText" class="typed-text"></div>
+
+        <div id="inputArea" class="input-area hidden">
+          <input id="codeInput" type="text" placeholder="Escribe la clave">
+          <button id="checkCode" class="btn">Ver video</button>
+          <div id="codeAlert" class="code-alert hidden"></div>
+        </div>
+
+        <div id="videoBox" class="video-box hidden">
+          <video id="secretVideo" class="secret-video" controls>
+            <source src="" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vista.js"></script>
+</body>
+</html>
